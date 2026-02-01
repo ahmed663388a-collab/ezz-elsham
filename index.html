@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+
+<!-- موبايل -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+
+<!-- SEO -->
+<title>مطعم عز الشام الزاوية الحمرا</title>
+<meta name="description" content="مأكولات شامية أصيلة. اطلب الآن عبر واتساب أو اتصال مباشر.">
+<meta name="keywords" content="مطعم عز الشام الزاوية الحمرا, مأكولات شامية, منيو مطعم الزاوية الحمرا, أكل شامي الزاوية الحمرا">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph -->
+<meta property="og:title" content="مطعم عز الشام الزاوية الحمرا">
+<meta property="og:description" content="مأكولات سورية أصيلة. طلبات دليفري، واتساب مباشر، اتصال سريع.">
+<meta property="og:type" content="website">
+
+<style>
+* { box-sizing: border-box; margin:0; padding:0; font-family:Tahoma, Arial;}
+body { background-image:url("bg.jpg"); background-size:cover; background-position:center; background-attachment:fixed;}
+.overlay { min-height:100vh; background:rgba(0,0,0,0.78); color:#fff; text-align:center; padding:30px 15px;}
+h1 { font-size:42px; letter-spacing:2px; margin-bottom:8px;}
+.subtitle { color:#f5c16c; font-size:18px; margin-bottom:25px;}
+.menu img { width:100%; max-width:420px; margin:15px auto; display:block; border-radius:14px; cursor:pointer; transition:0.3s;}
+.menu img:hover { transform:scale(1.03);}
+.buttons { margin-top:35px; display:flex; justify-content:center; gap:15px; flex-wrap:wrap;}
+.btn { padding:15px 26px; border-radius:50px; text-decoration:none; font-size:18px; font-weight:bold; display:flex; align-items:center; gap:10px; color:#fff; box-shadow:0 8px 20px rgba(0,0,0,0.5); transition:0.3s;}
+.btn:hover { transform:scale(1.05);}
+.whatsapp { background:#25D366; }
+.call { background:#cfa24d; }
+.facebook { background:#1877f2; }
+/* نافذة التكبير */
+.zoom { position:fixed; inset:0; background:rgba(0,0,0,0.9); display:none; justify-content:center; align-items:center; z-index:999;}
+.zoom img { width:95%; max-width:600px; border-radius:12px;}
+.close { position:absolute; top:20px; right:25px; font-size:30px; cursor:pointer;}
+@media(max-width:600px){ h1{ font-size:34px;} }
+</style>
+</head>
+
+<body>
+
+<div class="overlay">
+    <h1>مطعم عز الشام الزاوية الحمرا</h1>
+    <div class="subtitle">المأكولات السورية الأصيلة</div>
+
+    <div class="menu">
+        <img src="menu1.jpg" alt="منيو عز الشام" onclick="openZoom(this.src)">
+        <img src="menu2.jpg" alt="منيو عز الشام" onclick="openZoom(this.src)">
+    </div>
+
+    <div class="buttons">
+        <a class="btn whatsapp" href="https://wa.me/201080820501" target="_blank">📲 واتساب</a>
+        <a class="btn call" href="tel:01155532305">☎️ اتصال</a>
+        <a class="btn facebook" href="https://www.facebook.com/share/1EPiWAFe5c/" target="_blank" rel="noopener">📘 فيسبوك</a>
+    </div>
+</div>
+
+<div class="zoom" id="zoomBox" onclick="closeZoom()">
+    <span class="close">✕</span>
+    <img id="zoomImg">
+</div>
+
+<script>
+function openZoom(src){ document.getElementById("zoomBox").style.display="flex"; document.getElementById("zoomImg").src=src;}
+function closeZoom(){ document.getElementById("zoomBox").style.display="none";}
+</script>
+
+</body>
+</html>
